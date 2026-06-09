@@ -5,39 +5,38 @@ metadata:
   namespace: wanderlust
   labels:
     app: frontend
+
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: frontend
+
   template:
     metadata:
       name: frontend
       labels:
         app: frontend
+
     spec:
       containers:
-<<<<<<< HEAD
-      - name: frontend
-        image: smk233/traveltales-frontend-beta:v3
-        ports:
-        - containerPort: 80
-=======
         - name: frontend
           image: smk233/traveltales-frontend-beta:v3
           ports:
             - containerPort: 80
->>>>>>> 5379e74 (updating configuration)
+
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: frontend-service
-  namespace: wanderlust
+  namespace: traveltales
+
 spec:
   type: NodePort
   selector:
     app: frontend
+
   ports:
     - port: 80
       targetPort: 80
