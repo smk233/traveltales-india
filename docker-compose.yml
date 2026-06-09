@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: traveltales_mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+  redis:
+    image: redis:alpine
+    container_name: traveltales_redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: traveltales_backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URI=mongodb://mongodb:27017/traveltales
+      - REDIS_URL=redis://redis:6379
+      - PORT=5000
+      - JWT_SECRET=supersecretkey123456789
+      - NODE_ENV=production
+    depends_on:
+      - mongodb
+      - redis
+    volumes:
+      - backend_uploads:/app/public/uploads
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: traveltales_frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  mongodb_data:
+  redis_data:
+  backend_uploads:
