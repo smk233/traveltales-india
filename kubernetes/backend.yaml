@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: smk233/traveltales-backend-beta:latest
+        image: smk233/traveltales-backend-beta:v1.0
         ports:
         - containerPort: 5000
 ---
