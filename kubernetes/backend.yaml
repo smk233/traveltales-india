@@ -17,23 +17,16 @@ spec:
         app: backend
     spec:
       containers:
-<<<<<<< HEAD
       - name: backend
         image: smk233/traveltales-backend-beta:v3
         ports:
         - containerPort: 5000
-=======
-        - name: backend
-          image: smk233/traveltales-backend-beta:v3
-          ports:
-            - containerPort: 5000
->>>>>>> 5379e74 (updating configuration)
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: backend-service
-  namespace: wanderlust
+  namespace: traveltales
 spec:
   type: NodePort
   selector:
