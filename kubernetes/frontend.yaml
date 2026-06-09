@@ -19,12 +19,12 @@ spec:
       containers:
 <<<<<<< HEAD
       - name: frontend
-        image: smk233/traveltales-frontend-beta:v2.0
+        image: smk233/traveltales-frontend-beta:v3
         ports:
         - containerPort: 80
 =======
         - name: frontend
-          image: smk233/traveltales-frontend-beta:latest
+          image: smk233/traveltales-frontend-beta:v3
           ports:
             - containerPort: 80
 >>>>>>> 5379e74 (updating configuration)

@@ -19,12 +19,12 @@ spec:
       containers:
 <<<<<<< HEAD
       - name: backend
-        image: smk233/traveltales-backend-beta:v2.0
+        image: smk233/traveltales-backend-beta:v3
         ports:
         - containerPort: 5000
 =======
         - name: backend
-          image: smk233/traveltales-backend-beta:latest
+          image: smk233/traveltales-backend-beta:v3
           ports:
             - containerPort: 5000
 >>>>>>> 5379e74 (updating configuration)
