@@ -98,11 +98,11 @@ pipeline {
             steps {
                 script {
                     dir('backend') {
-                        docker_build("traveltales-backend-beta", "${params.BACKEND_DOCKER_TAG}", "trainwithshubham")
+                        docker_build("traveltales-backend-beta", "${params.BACKEND_DOCKER_TAG}", "smk233")
                     }
                     
                     dir('frontend') {
-                        docker_build("traveltales-frontend-beta", "${params.FRONTEND_DOCKER_TAG}", "trainwithshubham")
+                        docker_build("traveltales-frontend-beta", "${params.FRONTEND_DOCKER_TAG}", "smk233")
                     }
                 }
             }
@@ -111,8 +111,8 @@ pipeline {
         stage("Docker: Push to DockerHub") {
             steps {
                 script {
-                    docker_push("traveltales-backend-beta", "${params.BACKEND_DOCKER_TAG}", "trainwithshubham") 
-                    docker_push("traveltales-frontend-beta", "${params.FRONTEND_DOCKER_TAG}", "trainwithshubham")
+                    docker_push("traveltales-backend-beta", "${params.BACKEND_DOCKER_TAG}", "smk233") 
+                    docker_push("traveltales-frontend-beta", "${params.FRONTEND_DOCKER_TAG}", "smk233")
                 }
             }
         }
