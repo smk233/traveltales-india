@@ -1,32 +1,45 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: traveltales-frontend
+  name: frontend-deployment
+  namespace: wanderlust
   labels:
-    app: traveltales-frontend
+    app: frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: traveltales-frontend
+      app: frontend
   template:
     metadata:
+      name: frontend
       labels:
-        app: traveltales-frontend
+        app: frontend
     spec:
       containers:
+<<<<<<< HEAD
       - name: frontend
         image: smk233/traveltales-frontend-beta:v2.0
         ports:
         - containerPort: 80
+=======
+        - name: frontend
+          image: smk233/traveltales-frontend-beta:latest
+          ports:
+            - containerPort: 80
+>>>>>>> 5379e74 (updating configuration)
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: traveltales-frontend
+  name: frontend-service
+  namespace: wanderlust
 spec:
-  ports:
-  - port: 80
-    targetPort: 80
+  type: NodePort
   selector:
-    app: traveltales-frontend
+    app: frontend
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      nodePort: 31000

@@ -54,7 +54,7 @@ pipeline {
         stage("Git: Code update and push to GitHub") {
             steps {
                 script {
-                    withCredentials([gitUsernamePassword(credentialsId: 'Github-cred', gitToolName: 'Default')]) {
+                    withCredentials([gitUsernamePassword(credentialsId: 'github-cred', gitToolName: 'Default')]) {
                         sh '''
                         echo "Checking repository status: "
                         git status
@@ -78,7 +78,7 @@ pipeline {
         success {
             script {
                 emailext attachLog: true,
-                from: 'smk233@gmail.com',
+                from: 'sumit705035@gmail.com',
                 subject: "TravelTales Application has been updated and deployed - '${currentBuild.result}'",
                 body: """
                     <html>
@@ -95,14 +95,14 @@ pipeline {
                     </body>
                     </html>
                 """,
-                to: 'smk233@gmail.com',
+                to: 'sumit705035@gmail.com',
                 mimeType: 'text/html'
             }
         }
         failure {
             script {
                 emailext attachLog: true,
-                from: 'smk233@gmail.com',
+                from: 'sumit705035@gmail.com',
                 subject: "TravelTales Application build failed - '${currentBuild.result}'",
                 body: """
                     <html>
@@ -116,7 +116,7 @@ pipeline {
                     </body>
                     </html>
                 """,
-                to: 'smk233@gmail.com',
+                to: 'sumit705035@gmail.com',
                 mimeType: 'text/html'
             }
         }

@@ -1,32 +1,45 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: traveltales-backend
+  name: backend-deployment
+  namespace: wanderlust
   labels:
-    app: traveltales-backend
+    app: backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: traveltales-backend
+      app: backend
   template:
     metadata:
+      name: backend
       labels:
-        app: traveltales-backend
+        app: backend
     spec:
       containers:
+<<<<<<< HEAD
       - name: backend
         image: smk233/traveltales-backend-beta:v2.0
         ports:
         - containerPort: 5000
+=======
+        - name: backend
+          image: smk233/traveltales-backend-beta:latest
+          ports:
+            - containerPort: 5000
+>>>>>>> 5379e74 (updating configuration)
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: traveltales-backend
+  name: backend-service
+  namespace: wanderlust
 spec:
-  ports:
-  - port: 5000
-    targetPort: 5000
+  type: NodePort
   selector:
-    app: traveltales-backend
+    app: backend
+  ports:
+    - port: 5000
+      targetPort: 5000
+      protocol: TCP
+      nodePort: 31100
