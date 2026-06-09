@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongodb-deployment
-  namespace: wanderlust
+  namespace: traveltales
   labels:
     app: mongodb
 spec:
@@ -32,7 +32,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongodb-service
-  namespace: wanderlust
+  namespace: traveltales
 spec:
   selector:
     app: mongodb
