@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: smk233/traveltales-frontend-beta:v1.0
+        image: smk233/traveltales-frontend-beta:v2.0
         ports:
         - containerPort: 80
 ---
