@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traveltales-frontend
+  labels:
+    app: traveltales-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traveltales-frontend
+  template:
+    metadata:
+      labels:
+        app: traveltales-frontend
+    spec:
+      containers:
+      - name: frontend
+        image: smk233/traveltales-frontend-beta:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: traveltales-frontend
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: traveltales-frontend

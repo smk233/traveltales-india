@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traveltales-backend
+  labels:
+    app: traveltales-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traveltales-backend
+  template:
+    metadata:
+      labels:
+        app: traveltales-backend
+    spec:
+      containers:
+      - name: backend
+        image: smk233/traveltales-backend-beta:latest
+        ports:
+        - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: traveltales-backend
+spec:
+  ports:
+  - port: 5000
+    targetPort: 5000
+  selector:
+    app: traveltales-backend
