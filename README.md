@@ -5,7 +5,9 @@ A full-stack travel blogging application built with **React, Node.js, MongoDB, a
 This project demonstrates automated CI/CD with Jenkins, code quality analysis using SonarQube, security scanning with Trivy and OWASP Dependency-Check, containerization with Docker, GitOps deployments using ArgoCD, and monitoring with Prometheus and Grafana.
 
 # 🚀 Project Architecture
-![CI/CD pipeline](photos/12.png)
+![CI/CD pipeline Architecture](photos/12.png)
+![DevOps + DevSecOps Project (CI/CD) Architecture](photos/13.png)
+
 
 
 ## 🏗️ Technology Stack
@@ -76,4 +78,147 @@ This project demonstrates automated CI/CD with Jenkins, code quality analysis us
 - 🔗 **Automated Workflow Integration:** Connects source control, CI/CD, containerization, and deployment.
 - 🔐 **Security-Focused Pipeline:** Integrates code quality and vulnerability checks into the delivery workflow.
 
-- 
+## 📁 Project Structure
+
+```text
+traveltales-india/
+│
+├── Automations/
+│   ├── updatebackendnew.sh
+│   └── updatefrontendnew.sh
+│
+├── backend/
+│   ├── api/
+│   ├── config/
+│   ├── controllers/
+│   ├── middlewares/
+│   ├── models/
+│   ├── routes/
+│   ├── services/
+│   ├── tests/
+│   ├── utils/
+│   ├── app.ts
+│   ├── Dockerfile
+│   └── package.json
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   ├── Dockerfile
+│   ├── nginx.conf
+│   ├── vite.config.ts
+│   └── package.json
+│
+├── GitOps/
+│   └── Jenkinsfile
+│
+├── kubernetes/
+│   ├── backend.yaml
+│   ├── frontend.yaml
+│   ├── mongodb.yaml
+│   └── redis.yaml
+│
+├── photos/
+│
+├── Jenkinsfile
+├── docker-compose.yml
+├── package.json
+├── package-lock.json
+├── .gitignore
+└── README.md
+```
+
+## 🚀 Clone & Run Project
+
+### 📋 Prerequisites
+
+- Git
+- Docker
+- Docker Compose
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/smk233/traveltales-india.git
+cd traveltales-india
+```
+
+### 2. Run Using Docker Compose
+
+Build the images and start the application:
+
+```bash
+docker compose up --build -d
+```
+
+### 3. Check Running Containers
+
+```bash
+docker compose ps
+```
+
+View application logs:
+
+```bash
+docker compose logs -f
+```
+
+### 4. Stop the Application
+
+```bash
+docker compose down
+```
+
+### 🛠️ Run Frontend and Backend Separately
+
+**Backend:**
+```bash
+cd backend
+npm install
+npm run
+```
+
+**Frontend:** Open a separate terminal:
+
+```bash
+cd frontend
+npm install
+npm run
+```
+
+Check each directory's `package.json` for the available development scripts before starting the services. Configure any required environment variables before running the application.
+
+
+
+
+
+# 📸 Project Screenshots
+
+![TravelTales India Live Application](photos/11.png)
+
+![AWS EC2 Instances](photos/2.png)
+
+![Jenkins CI Pipeline (Initial Builds, Failed & Success)](photos/1.png)
+
+![Jenkins CI Pipeline (Successful Builds + Dependency-Check Trend)](photos/3.png)
+
+![SonarQube Code Quality Report](photos/5.png)
+
+![Docker Hub Repositories](photos/16.png)
+
+![Jenkins CD Pipeline](photos/4.png)
+
+![Email Notification (Deployment Success)](photos/14.png)
+
+![Argo CD Application (GitOps Deployment)](photos/6.png)
+
+![Kubernetes Cluster (EKS) Resources](photos/15.png)
+
+![Prometheus Targets](photos/7.png)
+
+![Grafana Dashboard: CPU and Memory Usage](photos/8.png)
+
+![Grafana Dashboard: Memory Quota and Network Usage](photos/9.png)
+
+![Grafana Dashboard: Network Bandwidth and Packets](photos/10.png)
+
