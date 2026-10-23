@@ -284,3 +284,61 @@ Check each directory's `package.json` for the available development scripts befo
 
 ![Grafana Dashboard: Network Bandwidth and Packets](photos/10.png)
 
+
+
+
+# 🔧 DevOps & DevSecOps Concepts Implemented
+
+- Docker Containerization
+- Docker Image Build and Publishing
+- Jenkins CI/CD Pipeline Automation
+- Automated Code Quality Analysis using SonarQube
+- Dependency Vulnerability Scanning using OWASP Dependency-Check
+- Container Security Scanning using Trivy
+- Docker Image Management
+- AWS EC2 Infrastructure Management
+- Kubernetes Container Orchestration using AWS EKS
+- GitOps-Based Deployment using Argo CD
+- Kubernetes Deployments and Services
+- Environment Variable Management
+- MongoDB and Redis Integration
+- Application and Cluster Monitoring using Prometheus
+- Metrics Visualization using Grafana
+- Git and GitHub Version Control
+- Deployment Notifications and Troubleshooting
+
+---
+
+# 📚 What I Learned
+
+- Building and deploying a full-stack application using React and Node.js.
+- Containerizing application components using Docker.
+- Automating CI/CD workflows using Jenkins.
+- Integrating SonarQube for automated code quality analysis.
+- Scanning dependencies and container images for security vulnerabilities.
+- Deploying and managing containerized applications on AWS EKS.
+- Implementing GitOps workflows using Argo CD.
+- Managing Kubernetes deployments and services.
+- Working with MongoDB and Redis in a distributed application.
+- Monitoring application infrastructure using Prometheus and Grafana.
+- Troubleshooting CI/CD pipeline failures and deployment issues.
+- Understanding DevOps and DevSecOps practices in a practical project.
+
+---
+
+# 📄 License
+
+This project can be distributed under the MIT License if an MIT `LICENSE` file is included in the repository.
+
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+# 👨‍💻 Author
+
+**Sumit Kumar**
+
+- **GitHub:** https://github.com/smk233
+- **LinkedIn:** https://www.linkedin.com/in/sumitsmk
+
+---
