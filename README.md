@@ -3,10 +3,19 @@
 A full-stack travel blogging application built with **React, Node.js, MongoDB, and Redis**, deployed on **AWS EKS** using a DevSecOps and GitOps-based CI/CD pipeline.
 
 This project demonstrates automated CI/CD with Jenkins, code quality analysis using SonarQube, security scanning with Trivy and OWASP Dependency-Check, containerization with Docker, GitOps deployments using ArgoCD, and monitoring with Prometheus and Grafana.
-
 # 🚀 Project Architecture
-![CI/CD pipeline Architecture](photos/12.png)
+
+## 🔄 CI/CD Pipeline Architecture
+
+![CI/CD Pipeline Architecture](photos/12.png)
+
+---
+
+## 🛡️ DevOps & DevSecOps — End-to-End CI/CD Architecture
+
 ![DevOps + DevSecOps Project (CI/CD) Architecture](photos/13.png)
+
+---
 
 
 
@@ -191,34 +200,87 @@ Check each directory's `package.json` for the available development scripts befo
 
 
 
-
 # 📸 Project Screenshots
+
+## 🌍 TravelTales India — Live Application
 
 ![TravelTales India Live Application](photos/11.png)
 
+---
+
+## ☁️ AWS EC2 Infrastructure
+
 ![AWS EC2 Instances](photos/2.png)
+
+---
+
+## 🔄 Jenkins CI Pipeline — Initial Builds
 
 ![Jenkins CI Pipeline (Initial Builds, Failed & Success)](photos/1.png)
 
+---
+
+## ✅ Jenkins CI Pipeline — Successful Builds
+
 ![Jenkins CI Pipeline (Successful Builds + Dependency-Check Trend)](photos/3.png)
+
+---
+
+## 🔍 SonarQube Code Quality Analysis
 
 ![SonarQube Code Quality Report](photos/5.png)
 
+---
+
+## 🐳 Docker Hub Repositories
+
 ![Docker Hub Repositories](photos/16.png)
+
+---
+
+## 🚀 Jenkins CD Pipeline
 
 ![Jenkins CD Pipeline](photos/4.png)
 
+---
+
+## 📧 Deployment Success Email Notification
+
 ![Email Notification (Deployment Success)](photos/14.png)
+
+---
+
+## 🔁 Argo CD — GitOps Deployment
 
 ![Argo CD Application (GitOps Deployment)](photos/6.png)
 
+---
+
+## ☸️ AWS EKS — Kubernetes Resources
+
 ![Kubernetes Cluster (EKS) Resources](photos/15.png)
+
+---
+
+## 📈 Prometheus Monitoring Targets
 
 ![Prometheus Targets](photos/7.png)
 
+---
+
+## 📊 Grafana Dashboard — CPU & Memory Usage
+
 ![Grafana Dashboard: CPU and Memory Usage](photos/8.png)
 
+---
+
+## 💾 Grafana Dashboard — Memory Quota & Network Usage
+
 ![Grafana Dashboard: Memory Quota and Network Usage](photos/9.png)
+
+---
+
+## 🌐 Grafana Dashboard — Network Bandwidth & Packets
 
 ![Grafana Dashboard: Network Bandwidth and Packets](photos/10.png)
 
